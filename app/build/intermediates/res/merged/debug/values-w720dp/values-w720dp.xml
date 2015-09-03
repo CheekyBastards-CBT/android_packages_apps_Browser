@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/surge/Movies/android_packages_apps_Browser1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-w720dp/values-w720dp.xml -->
+    <eat-comment/>
+    <bool name="abc_action_bar_expanded_action_views_exclusive">false</bool>
+    <!-- From: file:/Users/surge/Movies/android_packages_apps_Browser1/app/src/main/res/values-w720dp/bools.xml -->
+    <eat-comment/>
+    <bool name="hide_nav_buttons">false</bool>
+    <!-- From: file:/Users/surge/Movies/android_packages_apps_Browser1/app/src/main/res/values-w720dp/dimensions.xml -->
+    <eat-comment/>
+    <dimen name="tab_width">240dp</dimen>
+</resources>

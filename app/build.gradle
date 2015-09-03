@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android{
+    useLibrary  'org.apache.http.legacy'
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+
+    defaultConfig {
+        applicationId "com.android.browser"
+        minSdkVersion 21
+        targetSdkVersion 23
+
+        testApplicationId "com.android.browser.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    dependencies {
+        compile 'com.android.support:support-annotations:+'
+        compile 'com.android.support:recyclerview-v7:+'
+        compile 'com.android.support:gridlayout-v7:+'
+        compile 'com.android.support:support-annotations:+'
+        compile 'com.android.support:design:+'
+        compile 'org.sufficientlysecure:openpgp-api:8.0'
+        compile 'com.android.support:support-v4:23.0.0'
+        compile 'com.android.support:cardview-v7:+'
+        compile 'com.android.support:support-v13:23.0.0'
+        compile 'com.android.support:appcompat-v7:23.0.0'
+        compile 'com.android.support:design:23.0.0'
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+        compile ('org.apache.httpcomponents:httpmime:4.3.5') {
+            // avoid "is ignored for the default configuration X" warnings
+            // since httpclient is included in the android SDK.
+            exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+        }
+
+    }
+}
